@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add your custom neon/glow effects used in your JS files here if they aren't in Tailwind config */
+.text-neon-pink {
+  text-shadow: 0 0 10px #ec4899, 0 0 20px #ec4899;
+}

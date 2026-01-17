@@ -63,9 +63,30 @@ const Footer = ({ activeNav, setActiveNav, onHomeClick }) => (
             </Link>
 
             {/* Social Links (No active state needed for external/dead links) */}
-            <a href="#" className="social-item"><div className="w-6 h-6"><InstaIcon /></div><span>Insta</span></a>
-            <a href="#" className="social-item"><div className="w-6 h-6"><LinkedInIcon /></div><span>LinkedIn</span></a>
-            <a href="#" className="social-item"><div className="w-6 h-6"><YoutubeIcon /></div><span>YouTube</span></a>
+            <a
+  href="https://www.instagram.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Instagram
+</a>
+
+<a
+  href="https://www.linkedin.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  LinkedIn
+</a>
+
+<a
+  href="https://www.youtube.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  YouTube
+</a>
+
         </div>
     </footer>
 );

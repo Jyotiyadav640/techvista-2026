@@ -70,7 +70,7 @@ const useScrollNavigation = (maxState, scrollCooldown) => {
             window.removeEventListener('touchmove', handleTouchMove);
             window.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [canScroll, maxState]); // Removed currentState from dependencies to stop re-binding
+    }, [canScroll, maxState, goToState]); // Removed currentState from dependencies to stop re-binding
 
     return { currentState, goToState, canScroll };
 };

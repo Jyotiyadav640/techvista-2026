@@ -6,23 +6,29 @@ import SocialSidebar from '../components/Nav/SocialSidebar.js';
 import Footer from '../components/Nav/Footer.js'; 
 import Preloader from '../components/Common/Preloader.js'; 
 import '../App.css'; 
+import { useCallback } from 'react';
+
 
 const useScrollNavigation = (maxState, scrollCooldown) => {
     const [currentState, setCurrentState] = useState(0);
     const [canScroll, setCanScroll] = useState(true);
     const stateRef = useRef(0); // Track current state to prevent race conditions
 
-    const goToState = (newState) => {
-        if (newState < 0 || newState > maxState || !canScroll) return;
-        
-        setCanScroll(false);
-        setCurrentState(newState);
-        stateRef.current = newState;
-        
-        setTimeout(() => {
-            setCanScroll(true);
-        }, scrollCooldown);
-    };
+   const goToState = useCallback(
+  (newState) => {
+    if (newState < 0 || newState > maxState || !canScroll) return;
+
+    setCanScroll(false);
+    setCurrentState(newState);
+    stateRef.current = newState;
+
+    setTimeout(() => {
+      setCanScroll(true);
+    }, scrollCooldown);
+  },
+  [canScroll, maxState, scrollCooldown]
+);
+
 
     useEffect(() => {
         const handleWheel = (event) => {

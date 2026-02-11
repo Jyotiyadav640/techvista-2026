@@ -12,7 +12,7 @@ const useScrollNavigation = (maxState, scrollCooldown) => {
     const [canScroll, setCanScroll] = useState(true);
     const stateRef = useRef(0);
 
-    const goToState = (newState) => {
+    const goToState = React.useCallback((newState) => {
         if (newState < 0 || newState > maxState || !canScroll) return;
 
         setCanScroll(false);
@@ -22,7 +22,7 @@ const useScrollNavigation = (maxState, scrollCooldown) => {
         setTimeout(() => {
             setCanScroll(true);
         }, scrollCooldown);
-    };
+    }, [canScroll, maxState, scrollCooldown]);
 
     useEffect(() => {
         const handleWheel = (event) => {

@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import Sponsor from './pages/Sponsor';
 import EventMasterTerminal from './pages/Events/EventMasterTerminal.js';
 
 function App() {

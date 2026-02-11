@@ -70,9 +70,9 @@ const VideoContainer = ({ videoSrc, year, delay }) => {
 
         {/* Center Interaction HUD */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-           <div className="px-6 py-3 border border-[#39ff14] bg-black/60 backdrop-blur-md text-[#39ff14] font-orbitron text-[10px] tracking-[0.2em] shadow-[0_0_20px_rgba(57,255,20,0.4)]">
-             {isMuted ? "SYSTEM AUDIO: MUTED // CLICK TO ENABLE" : "SYSTEM AUDIO: ACTIVE"}
-           </div>
+          <div className="px-6 py-3 border border-[#39ff14] bg-black/60 backdrop-blur-md text-[#39ff14] font-orbitron text-[10px] tracking-[0.2em] shadow-[0_0_20px_rgba(57,255,20,0.4)]">
+            {isMuted ? "SYSTEM AUDIO: MUTED // CLICK TO ENABLE" : "SYSTEM AUDIO: ACTIVE"}
+          </div>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@ const About = () => {
     <div className="text-white h-screen w-full relative bg-[#030f0a] overflow-hidden flex flex-col font-roboto selection:bg-[#39ff14] selection:text-black">
       {/* Brand Logo */}
       <div className="fixed top-4 left-4 md:top-6 md:left-6 z-[200] font-orbitron text-xl md:text-3xl font-bold text-white">
-          <img src="/logo.png" alt="TechVista" className="h-12 md:h-16 w-auto" />
+        <img src="/logo.jpg" alt="TechVista" className="h-12 md:h-16 w-auto" />
       </div>
 
       <SidebarNav activeNav={activeNav} setActiveNav={setActiveNav} />
@@ -103,13 +103,13 @@ const About = () => {
       <div className="flex-1 w-full h-full overflow-y-auto scroll-smooth flex flex-col relative no-scrollbar">
         {/* Sub-navigation Header */}
         <div className="sticky top-0 z-[150] w-full pt-4 px-2">
-            <header className="py-4 md:py-6 flex justify-center items-center w-full">
-                <Link to="/events" className="group">
-                    <h1 className="font-orbitron tracking-[0.2em] md:tracking-[0.3em] text-[12px] md:text-lg font-black uppercase pb-2 text-white/40 group-hover:text-[#39ff14] transition-all duration-300">
-                        Competitions
-                    </h1>
-                </Link>
-            </header>
+          <header className="py-4 md:py-6 flex justify-center items-center w-full">
+            <Link to="/events" className="group">
+              <h1 className="font-orbitron tracking-[0.2em] md:tracking-[0.3em] text-[12px] md:text-lg font-black uppercase pb-2 text-white/40 group-hover:text-[#39ff14] transition-all duration-300">
+                Competitions
+              </h1>
+            </Link>
+          </header>
         </div>
 
         {/* Global Cinematic Background */}
@@ -147,46 +147,46 @@ const About = () => {
           <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
             <h2 className="font-orbitron text-3xl md:text-5xl font-bold uppercase tracking-[0.2em] text-[#39ff14] mb-12 text-center drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]">About TechVista</h2>
             <div className="w-full bg-black/10 backdrop-blur-2xl border border-white/5 p-8 md:p-12 rounded-2xl text-center mb-16 shadow-[0_0_40px_rgba(0,0,0,0.4)]">
-                <p className="text-sm md:text-xl text-gray-200 leading-relaxed font-light mb-8">
- <strong><b>TechVista</b> </strong>is a transformative experience, offering
-                            students a unique platform to enhance their technical
-                            expertise, ignite creativity, and develop leadership skills.
-                            It serves as a dynamic space for innovation, where
-                            participants can showcase their technical prowess,
-                            collaborate, and exchange ideas. With a diverse range of
-                            events,<strong> <b>TechVista</b></strong> challenges students to push
-                            boundaries, think critically, and solve real-world problems
-                            with cutting-edge technology.<br/><br/>
+              <p className="text-sm md:text-xl text-gray-200 leading-relaxed font-light mb-8">
+                <strong><b>TechVista</b> </strong>is a transformative experience, offering
+                students a unique platform to enhance their technical
+                expertise, ignite creativity, and develop leadership skills.
+                It serves as a dynamic space for innovation, where
+                participants can showcase their technical prowess,
+                collaborate, and exchange ideas. With a diverse range of
+                events,<strong> <b>TechVista</b></strong> challenges students to push
+                boundaries, think critically, and solve real-world problems
+                with cutting-edge technology.<br /><br />
 
-                            Beyond celebrating technological advancements,
-                            <strong><b>TechVista </b></strong>fosters personal growth by nurturing creativity,
-                            leadership, and teamwork. The festival provides valuable
-                            opportunities for hands-on learning, interactive
-                            competitions, and engaging discussions, empowering
-                            students to broaden their horizons and refine both
-                            technical and interpersonal skills.<br/><br/>
+                Beyond celebrating technological advancements,
+                <strong><b>TechVista </b></strong>fosters personal growth by nurturing creativity,
+                leadership, and teamwork. The festival provides valuable
+                opportunities for hands-on learning, interactive
+                competitions, and engaging discussions, empowering
+                students to broaden their horizons and refine both
+                technical and interpersonal skills.<br /><br />
 
-                            By participating in <strong><b>TechVista </b></strong>, students gain exposure to
-                            the latest trends and cultivate essential skills for success
-                            in the tech industry. It serves as a pathway for students to
-                            shine, excel, and contribute meaningfully to the world of
-                            technology, creativity, and leadership.          </p>
+                By participating in <strong><b>TechVista </b></strong>, students gain exposure to
+                the latest trends and cultivate essential skills for success
+                in the tech industry. It serves as a pathway for students to
+                shine, excel, and contribute meaningfully to the world of
+                technology, creativity, and leadership.          </p>
             </div>
 
             {/* Event Statistics Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-24 px-4">
-                <StatCard icon={<CalendarIcon />} value="2 Days" label="Of Tech Fun" delay="delay-1" />
-                <StatCard icon={<LocationIcon />} value="8 Venues" label="Across Vidyalankar" delay="delay-2" />
-                <StatCard icon={<AttendeesIcon />} value="2000+" label="Expected Attendees" delay="delay-3" />
-                <StatCard icon={<FlashIcon />} value="11" label="Total Events" delay="delay-4" />
+              <StatCard icon={<CalendarIcon />} value="2 Days" label="Of Tech Fun" delay="delay-1" />
+              <StatCard icon={<LocationIcon />} value="8 Venues" label="Across Vidyalankar" delay="delay-2" />
+              <StatCard icon={<AttendeesIcon />} value="2000+" label="Expected Attendees" delay="delay-3" />
+              <StatCard icon={<FlashIcon />} value="11" label="Total Events" delay="delay-4" />
             </div>
 
             {/* Video Highlights Section */}
             <h2 className="font-orbitron text-2xl md:text-4xl font-bold uppercase tracking-[0.2em] text-[#00ffd5] mb-16 text-center drop-shadow-[0_0_12px_rgba(0,255,213,0.5)]">Glimpses</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full max-w-7xl mb-16 px-4">
-                <VideoContainer videoSrc="/files/aftermovie.mov" year="2025" delay="delay-1" />
-                <VideoContainer videoSrc="/files/after.mp4" year="2024" delay="delay-2" />
+              <VideoContainer videoSrc="/files/aftermovie.mov" year="2025" delay="delay-1" />
+              <VideoContainer videoSrc="/files/after.mp4" year="2024" delay="delay-2" />
             </div>
           </div>
         </main>

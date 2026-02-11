@@ -8,7 +8,7 @@ import About from './pages/About';
 import EventMasterTerminal from './pages/Events/EventMasterTerminal.js';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  //const [loading, setLoading] = useState(true);
 
 
 

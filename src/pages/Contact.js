@@ -35,7 +35,7 @@ const CONTACT_DATA = [
   { id: 24, section: 'committee-heads', name: "Shubh Nair", role: "Technical Head", email: "shubh.nair@vsit.edu.in", phone: "+91 90826 02095", img: "/SOCIAL/7.jpg" },
   { id: 25, section: 'committee-heads', name: "Mayuresh Tandel", role: "Technical Head", email: "mayuresh.tandel@vsit.edu.in", phone: "+91 87925 81488", img: "/SOCIAL/8.jpg" },
   { id: 26, section: 'committee-heads', name: "Pooja Salunkhe", role: "Marketing Head", email: "pooja.salunkhe@vsit.edu.in", phone: "+91 91379 79221", img: "/SOCIAL/11.jpg" },
-  { id: 27, section: 'committee-heads', name: "Nupur Budge", role: "Sponsorship Head", email: "nupur.bugde1@vsit.edu.in", phone: "+91 99785 23456", img: "/SOCIAL/5.jpg" },
+  { id: 27, section: 'committee-heads', name: "Nupur Budge", role: "Sponsorship Head", email: "nupur.bugde1@vsit.edu.in", phone: "+91 99785 23456", img: "/SOCIAL/20.jpg" },
 
 ];
 

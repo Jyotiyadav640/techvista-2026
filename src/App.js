@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Preloader from './components/Common/Preloader.js';
+
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
@@ -10,7 +10,7 @@ import EventMasterTerminal from './pages/Events/EventMasterTerminal.js';
 function App() {
   const [loading, setLoading] = useState(true);
 
-  //if (loading) return <Preloader onFinish={() => setLoading(false)} />;
+
 
   const sponsorLoadingStyle = {
     display: 'flex',

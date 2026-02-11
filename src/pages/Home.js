@@ -69,7 +69,7 @@ const useScrollNavigation = (maxState, scrollCooldown) => {
             window.removeEventListener('touchmove', handleTouchMove);
             window.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [canScroll, maxState]);
+    }, [canScroll, maxState, goToState]);
 
     return { currentState, goToState, canScroll };
 };
@@ -111,7 +111,7 @@ const Drone = ({ side, mouseX, mouseY }) => {
                         <div className="spotlight-beam"></div>
                     </div>
                 </motion.div>
-</div>
+            </div>
         </div>
     );
 };
@@ -181,17 +181,17 @@ const AftermovieSection = () => (
     <div id="aftermovie-content" className="w-full px-4 md:px-0 flex flex-col items-center justify-center h-full">
         <h2 className="font-orbitron text-xl md:text-4xl lg:text-6xl font-bold uppercase tracking-widest text-white text-neon-pink mb-8 relative z-[105]">Aftermovie</h2>
         <div className="w-full max-w-3xl aspect-video rounded-lg overflow-hidden shadow-2xl video-container relative z-10">
-<video
-    className="w-full h-full object-cover"
-    controls
-    autoPlay
-    muted
-    loop
-    playsInline
-  >
-<source src="/files/aftermovie.mov" type="video/mp4"  autoPlay/>
-</video>
-    </div>
+            <video
+                className="w-full h-full object-cover"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+            >
+                <source src="/files/aftermovie.mov" type="video/mp4" autoPlay />
+            </video>
+        </div>
     </div>
 );
 
@@ -200,29 +200,29 @@ const AboutSection = () => (
         <h2 className="font-orbitron text-xl md:text-4xl lg:text-6xl font-bold uppercase tracking-widest text-white text-neon-pink mb-8 relative z-10">About TechVista</h2>
         <div className="w-full max-w-3xl bg-black/20 backdrop-blur-lg rounded-lg border border-[#00ffd5]/20 p-6 md:p-8 description-box relative z-10">
             <p className="text-[10px] md:text-lg lg:text-xl text-gray-300 leading-relaxed font-light text-center">
-                            <strong><b>TechVista</b> </strong>is a transformative experience, offering
-                            students a unique platform to enhance their technical
-                            expertise, ignite creativity, and develop leadership skills.
-                            It serves as a dynamic space for innovation, where
-                            participants can showcase their technical prowess,
-                            collaborate, and exchange ideas. With a diverse range of
-                            events,<strong> <b>TechVista</b></strong> challenges students to push
-                            boundaries, think critically, and solve real-world problems
-                            with cutting-edge technology.<br/><br/>
+                <strong><b>TechVista</b> </strong>is a transformative experience, offering
+                students a unique platform to enhance their technical
+                expertise, ignite creativity, and develop leadership skills.
+                It serves as a dynamic space for innovation, where
+                participants can showcase their technical prowess,
+                collaborate, and exchange ideas. With a diverse range of
+                events,<strong> <b>TechVista</b></strong> challenges students to push
+                boundaries, think critically, and solve real-world problems
+                with cutting-edge technology.<br /><br />
 
-                            Beyond celebrating technological advancements,
-                            <strong><b>TechVista </b></strong>fosters personal growth by nurturing creativity,
-                            leadership, and teamwork. The festival provides valuable
-                            opportunities for hands-on learning, interactive
-                            competitions, and engaging discussions, empowering
-                            students to broaden their horizons and refine both
-                            technical and interpersonal skills.<br/><br/>
+                Beyond celebrating technological advancements,
+                <strong><b>TechVista </b></strong>fosters personal growth by nurturing creativity,
+                leadership, and teamwork. The festival provides valuable
+                opportunities for hands-on learning, interactive
+                competitions, and engaging discussions, empowering
+                students to broaden their horizons and refine both
+                technical and interpersonal skills.<br /><br />
 
-                            By participating in <strong><b>TechVista </b></strong>, students gain exposure to
-                            the latest trends and cultivate essential skills for success
-                            in the tech industry. It serves as a pathway for students to
-                            shine, excel, and contribute meaningfully to the world of
-                            technology, creativity, and leadership.          </p>
+                By participating in <strong><b>TechVista </b></strong>, students gain exposure to
+                the latest trends and cultivate essential skills for success
+                in the tech industry. It serves as a pathway for students to
+                shine, excel, and contribute meaningfully to the world of
+                technology, creativity, and leadership.          </p>
         </div>
     </div>
 );
@@ -299,7 +299,7 @@ const Home = () => {
         <>
             <AnimatePresence>
                 {isLoading && (
-                    <motion.div key="loader" exit={{ opacity: 0 }} transition={{ duration: 1 }} style={{position: 'fixed', inset: 0, zIndex: 10000}}>
+                    <motion.div key="loader" exit={{ opacity: 0 }} transition={{ duration: 1 }} style={{ position: 'fixed', inset: 0, zIndex: 10000 }}>
                         <Preloader />
                     </motion.div>
                 )}
@@ -312,12 +312,12 @@ const Home = () => {
 
                 <motion.div className="fixed inset-0 z-[3] pointer-events-none" style={{ background: flashlightOverlay }} />
                 <div className="fixed top-4 left-4 md:top-6 md:left-6 z-[200] font-orbitron text-xl md:text-3xl font-bold text-white">
-                        <img
-                            src="/logo.png"
-                            alt="TechVista"
-                            className="h-12 md:h-16 w-auto" // Added sizing to ensure it shows up!
-                        />
-                    </div>
+                    <img
+                        src="/logo.png"
+                        alt="TechVista"
+                        className="h-12 md:h-16 w-auto" // Added sizing to ensure it shows up!
+                    />
+                </div>
 
                 <SidebarNav activeNav={activeNav} setActiveNav={setActiveNav} onHomeClick={goToState} />
                 <SocialSidebar />
